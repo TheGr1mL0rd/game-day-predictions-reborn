@@ -1,0 +1,132 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 270 70% 54%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 0 90% 62%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 212 26% 83%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(120deg, #1A1F2C, #221F26, #8B5CF6);
+    background-size: 200% 200%;
+    animation: gradientBackground 15s ease infinite;
+  }
+
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .mask-radial-gradient {
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #D946EF, #8B5CF6);
+  }
+  
+  .card-glow {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  }
+  
+  .neo-blur {
+    backdrop-filter: blur(12px);
+    background: rgba(26, 31, 44, 0.7);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+  }
+
+  /* Modified selectors that might have white colors */
+  ::selection {
+    background-color: #8B5CF6;
+    color: #1A1F2C;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1A1F2C;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #8B5CF6;
+    border-radius: 4px;
+  }
+
+  input::placeholder, 
+  textarea::placeholder {
+    color: #4a5568;
+  }
+  
+  /* New data flow animation for the neural network */
+  @keyframes data-flow {
+    0% {
+      opacity: 0;
+      transform: translateX(0) translateY(0);
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(300px) translateY(100px);
+    }
+  }
+  
+  .animate-data-flow {
+    animation: data-flow 4s ease-in-out infinite;
+  }
+}
