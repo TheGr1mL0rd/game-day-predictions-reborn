@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Football, Home, LineChart, Settings, TrendingUp } from 'lucide-react';
+import { Trophy, Home, LineChart, Settings, TrendingUp } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Football className="h-8 w-8 text-sport-blue" />
+            <Trophy className="h-8 w-8 text-sport-blue" />
             <h1 className="text-2xl font-bold gradient-text">SportAI</h1>
           </div>
           <nav className="hidden md:flex space-x-6">

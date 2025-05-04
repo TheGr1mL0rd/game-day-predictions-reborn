@@ -100,7 +100,6 @@ const GamePredictions: React.FC = () => {
                 <Progress 
                   value={game.homeTeam.winProbability} 
                   className="h-2 bg-sport-red/20"
-                  indicatorClassName="bg-sport-blue"
                 />
                 <div className="mt-4 text-center">
                   <span className="text-sm font-medium">
